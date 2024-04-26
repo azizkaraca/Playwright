@@ -7,6 +7,12 @@ test.beforeEach(async({page})=> { // bu body icerisine her testten once calismas
 
 });
 
+test.afterAll(async({page})=>{ // bunu yaptim cunku acilan browseren tum testler bittikten sonra kapanmasini istiyorum
+
+    await page.close(); // bunu kontrol edecegim baska bir kapatma metodu var mi.
+    
+});
+
 test.describe("Ders1", () => {   // testlerimizi gruplandirmak icin "test.describe" ile bu body icerisine testlerimizi gruplandirabiliriz. 
                                        // async ({page}) parametresini burada vermiyoruz.
 

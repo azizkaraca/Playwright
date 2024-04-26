@@ -1,10 +1,14 @@
 import{test,expect} from '@playwright/test';
 import exp from 'constants';
 
-test.beforeEach(async({page}) => {
+test.beforeEach(async({page}) => { // 
 
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
+});
+
+test.afterAll(async({page})=>{ 
+    await page.close(); 
 });
 
 test("Build In Locaters", async ({page}) => {
