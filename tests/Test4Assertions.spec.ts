@@ -16,6 +16,7 @@ test.describe('Assertions', () => {
 
     });
 
+    // test.skip("Assertions Element Checked", async ({ page }) => { // .skip dersek bu testi calistirmaz
     test("Assertions Element Checked", async ({ page }) => {
 
         const checkBox = page.locator("#male");
