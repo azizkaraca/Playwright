@@ -3,7 +3,7 @@ import exp from 'constants';
 import { execPath } from 'process';
 
 
-test.afterAll(async ({ page }) => {
+test.afterEach(async ({ page }) => {
     await page.close();
 });
 

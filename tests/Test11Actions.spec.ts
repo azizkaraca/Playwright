@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { describe } from 'node:test';
 
-test.afterAll(async ({ page }) => {
+test.afterEach(async ({ page }) => {
     await page.close();
 });
 
