@@ -20,7 +20,7 @@ test.describe("Windows Handling", async () => {
         await expect(text).toBeVisible(); 
         
         // bu sekilde yapilan bir islem hatali olur cunku page nesnesi ile yani acilan tab de islem yapilamaz.
-        // islemi yeni acilacak pencerede yapmamiz gerekecek onun icin yeni acilan sayfayi page e atama yapmamiz lazim
+        // islemi yeni acilacak pencerede yapmamiz gerekecek onun icin yeni acilan sayfayi page'e atama yapmamiz lazim
 
     })
 

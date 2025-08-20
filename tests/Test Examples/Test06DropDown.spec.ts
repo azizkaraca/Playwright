@@ -21,11 +21,11 @@ test.describe("Drop Down Tests", async () => {
         await dropdown.selectOption({ value: "germany" }); // value ye gore alirsak
         await page.waitForTimeout(2000);
         await dropdown.selectOption({ index: 5 }); // index e gore alirsak
-        await page.waitForTimeout(2000); // secme islemlerini gorebilmek icin wait koyduk
+        await page.waitForTimeout(2000); // secme islemlerini gorebilmek icin wait koyduk, silebiliriz
 
-        const options = page.locator("#country option"); // burada locator altinda olan elemanlari liste seklinde tutuyor
+        const options = page.locator("#country option"); // burada #country locatorin altinda option olan elemanlari liste seklinde tutuyor. arada bosluk olunca childreni optionlari aliyor
         await expect(options).toHaveCount(10); // bu locatorda bulunan elemanlarin sayisi 10 mu dogrulamasi
-        expect(await options.allTextContents()).toContain("China"); // options locator icinde China varmi
+        expect(await options.allTextContents()).toContain("China"); // options locator icinde China varmi / allTextContents() ile optionslarin hepsinin textini aliyoruz
 
         const optionsArray = page.$$("#country option"); // array olarakta bu sekilde $$ koyarsak locator altindaki elemanlari array olarak tutar
         expect(await optionsArray).toHaveLength(10); // yine burada da arrayin uzunlugunu bularak elaman sayisini dogrulayabiliriz
@@ -49,8 +49,7 @@ test.describe("Drop Down Tests", async () => {
         await expect(multiSelect).toHaveValues(["red", "blue", "green"]) //dogrulama value ile oldugundan locatorda value degerlerini alicaz
     })
 
-
-});
+  
 
 test.describe("DropDowns Without Select Tag", async () => {
 

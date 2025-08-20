@@ -55,7 +55,7 @@ test.describe("Actions", () => {
         const sourceElement = page.locator("id=draggable");
         const targetElement = page.locator("id=droppable");
         await sourceElement.dragTo(targetElement);
-        expect(await targetElement.textContent()).toContain("Dropped");
+        expect(await targetElement.textContent()).toContain("Dropped"); 
 
     })
 

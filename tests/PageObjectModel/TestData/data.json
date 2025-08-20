@@ -1,7 +1,9 @@
 {
 
-    "url" : "https://www.demoblaze.com/",
-    "username" : "aziz@karaca.com",
-    "password" : "qwer1234"
+    
+    "url" : "https://across-qa-v3.demo.i4.energy",
+    "username" : "qualityassurance",
+    "password" : "qa123456!",
+    "title" : "Across i4Energy"
 
 }
